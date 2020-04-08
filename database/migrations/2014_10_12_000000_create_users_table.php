@@ -13,6 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+<<<<<<< HEAD
         Schema::create('user', function (Blueprint $table) {
             $table->id();
             $table->string('username');
@@ -22,6 +23,14 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('kodepos');
+=======
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+>>>>>>> 88935b6138a5fd4f44ef8594f92bfb33c2967cfb
             $table->rememberToken();
             $table->timestamps();
         });
@@ -34,6 +43,10 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+<<<<<<< HEAD
         Schema::dropIfExists('user');
+=======
+        Schema::dropIfExists('users');
+>>>>>>> 88935b6138a5fd4f44ef8594f92bfb33c2967cfb
     }
 }
