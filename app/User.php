@@ -5,8 +5,6 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
-<<<<<<< HEAD
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
@@ -15,23 +13,13 @@ class User extends Authenticatable implements JWTSubject
 
     protected $table = "user"; 
 
-=======
-class User extends Authenticatable
-{
-    use Notifiable;
-
->>>>>>> 88935b6138a5fd4f44ef8594f92bfb33c2967cfb
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-<<<<<<< HEAD
         'username', 'fullname', 'alamat', 'email', 'password', 'kodepos',
-=======
-        'name', 'email', 'password',
->>>>>>> 88935b6138a5fd4f44ef8594f92bfb33c2967cfb
     ];
 
     /**
@@ -51,7 +39,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-<<<<<<< HEAD
 
     public function getJWTIdentifier()
     {
@@ -62,6 +49,5 @@ class User extends Authenticatable
     {
         return [];
     }
-=======
->>>>>>> 88935b6138a5fd4f44ef8594f92bfb33c2967cfb
+
 }
