@@ -25,7 +25,9 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('user', "UserController@index");
     Route::get('user/{limit}/{offset}', "UserController@getAll");
 
-    //Barang
-    Route::get('barang', "BarangController@index");
-    Route::post('barang', "BarangController@store");
+    //Produk
+    Route::get('produk', "ProdukController@index");
+    Route::post('produk', "ProdukController@store");
+    Route::put('produk/{id}', "ProdukController@update");
+    Route::delete('produk/{id}', "ProdukController@destroy");
 });
